@@ -275,6 +275,8 @@ def main():
     # addData('0002', 'Silfy', 'IT', [97, 98, 99], 10000)
     # showAllData('1')
     # deleteData(['0001', '0002', '0003'])
+    # showSpecificData(1, ['12345'])  # ค้นหาข้อมูลจากคอลัมน์ ID
+    # showSpecificData(4, [80], '1')  # ค้นหาข้อมูลที่มีคะแนนเฉลี่ยมากกว่า 80
     pass
 
 

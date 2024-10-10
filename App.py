@@ -123,8 +123,8 @@ while True:
                         choice_edit_score = input("(Edit) Enter your choice: ")
                         all_user_data = bfo.readDataFromBinFile()
                         all_user_data = [(user_data[0],user_data[1] , f"[{', '.join(list(map(str, user_data[3])))}]") for user_data in all_user_data]
-                        dtype = [('ID', 'U20'),             # 4-character string for ID
-                                ('Name', 'U20'),           # 10-character string for Name
+                        dtype = [('ID', 'U20'),          
+                                ('Name', 'U20'),         
                                 ('Score', 'U30')]
                         all_user_data_fltr = asarray(all_user_data, dtype=dtype)
                         data_fltr = all_user_data_fltr[isin(all_user_data_fltr['ID'], multi_id)]
@@ -144,8 +144,6 @@ while True:
                                     if len(new_score) == 0:
                                         print(f"Score not found can't edit score for {id}.")
                                         continue
-                                    # while len(new_score) < 4:
-                                    #     new_score.insert(0, 0)
                                     multi_new_score.append(new_score)
                                 bfo.editData(column_choice,multi_id,multi_new_score,choice_edit_score)
                             case '2':
@@ -239,5 +237,3 @@ while True:
         print("================ (End of operation) ================")
         input("Press Enter to continue...")
         print()
-    # finally:
-    #     system('cls')
