@@ -1,1 +1,5 @@
 generateData.py
+exportCodePDF.py
+*.tex
+*.ipynb
+*.gz
